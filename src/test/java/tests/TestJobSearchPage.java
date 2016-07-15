@@ -9,13 +9,13 @@ import base.TestBase;
 public class TestJobSearchPage extends TestBase {
     @BeforeClass
 	public void classSetup(){
-		headerSection.jobSearch.click();
+		headerSection.jobSearchLink.click();
 	}
 	
 	@Test(priority = 1)
 	public void testNewJobCount(){
 		
-		Assert.assertEquals(jobSearchPage.jobCount.getText(), "New Jobs (Total: 35 Jobs)");
+		Assert.assertEquals(jobSearchPage.jobCount.getText(), "New Jobs (Total: 65 Jobs)");
 	}
 	
 	@Test(priority = 0)

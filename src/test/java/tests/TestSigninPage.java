@@ -62,10 +62,32 @@ public class TestSigninPage extends TestBase {
 	
 	@Test
 	public void testWithEmtyCredential(){
+		headerSection.signinLink.click();
 		signinPage.signin("", "");
 		Assert.assertEquals(signinPage.errorMessage.get(0).getText(), "* Email can not be empty.");
 		Assert.assertEquals(signinPage.errorMessage.get(1).getText(), "* Password can not be empty.");
 	}
+	
+	@Test
+	public void testWithEmployerId(){
+		signinPage.signin("shakil_ipa@yahoo.com", " 365827");
+		headerSection.contactusPageLink.click();
+		Assert.assertTrue(contactusPageLink.getCurrentUrl().contains("contactus.php"));
+		
+		
+		
+	}
+	
+	@Test
+	public void testWithEmployerId1(){
+		headerSection.signinLink.click();
+		signinPage.signin("shakil_ipa@yahoo.com", " 365827");
+		headerSection.jobSearchLink.click();
+		Assert.assertEquals(driver.getCurrentUrl(), "http://qa.elitecareer.net/");
+		
+	}
+	
+	
 	
 	
 	

@@ -7,8 +7,11 @@ import org.testng.annotations.Listeners;
 
 import pages.ContactUsPageLink;
 import pages.EmployerPage;
+import pages.FacebookLinkPage;
 import pages.HeaderSection;
 import pages.JobSeekerPage;
+import pages.RegistrationPage;
+import pages.SideBar;
 import pages.JobSearchPage;
 import pages.SigninPage;
 
@@ -26,6 +29,9 @@ public class TestBase extends Driver {
 	protected static JobSeekerPage jobSeekerPage;
 	protected static EmployerPage employerPage;
 	protected static ContactUsPageLink contactusPageLink;
+	protected static RegistrationPage registrationPage;
+	protected static SideBar sideBar;
+	protected static FacebookLinkPage facebookLinkPage;
 	
 	
 	@BeforeTest
@@ -39,12 +45,13 @@ public class TestBase extends Driver {
 		}
 		headerSection = PageFactory.initElements(driver, HeaderSection.class);
 		jobSearchPage = PageFactory.initElements(driver, JobSearchPage.class);
-		//jobSearchPage = new JobSearchPage;
 		signinPage = PageFactory.initElements(driver, SigninPage.class);
 		jobSeekerPage = PageFactory.initElements(driver,JobSeekerPage.class);
 		employerPage = PageFactory.initElements(driver, EmployerPage.class);
 		contactusPageLink = PageFactory.initElements(driver, ContactUsPageLink.class);
-		
+		registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
+		sideBar = PageFactory.initElements(driver, SideBar.class);
+		facebookLinkPage = PageFactory.initElements(driver, FacebookLinkPage.class);
 	}
 	
 	@AfterTest

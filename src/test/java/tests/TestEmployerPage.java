@@ -9,7 +9,7 @@ import base.TestBase;
 public class TestEmployerPage extends TestBase {
 	@BeforeClass
 	public void classSetup(){
-		headerSection.employer.click();
+		headerSection.employerLink.click();
 	}
 	@Test
 	public void testEmployerPage(){

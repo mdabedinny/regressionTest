@@ -9,7 +9,7 @@ import base.TestBase;
 public class TestJobSeekerPage extends TestBase {
 	@BeforeClass
 	public void classSetup(){
-		headerSection.jobSearch.click();
+		headerSection.jobSearchLink.click();
 	}
 	
 	@Test
