@@ -1,16 +1,20 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import uitls.ReadProperties;
 
 public class Driver extends ReadProperties {
 	public static WebDriver driver;
+	public static String chromeDriverPath;
 	
 	public void setDriver(String browserType, String appUrl){
 		if(browserType.equalsIgnoreCase("firefox")){
 			initFirefox();
+		}else if(browserType.equalsIgnoreCase("chrome")){
+			initChromeDriver(chromeDriverPath);
 		}else{
 			initFirefox();
 		}
@@ -27,6 +31,14 @@ public class Driver extends ReadProperties {
 		driver = new FirefoxDriver();
 		
 	}
+	
+	private void initChromeDriver(String chromeDriverPath){
+		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		driver = new ChromeDriver();
+		
+		
+	}
+
 	
 	public static WebDriver getDriver(){
 		

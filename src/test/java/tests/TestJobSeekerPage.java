@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,5 +17,7 @@ public class TestJobSeekerPage extends TestBase {
 	public void testjobSeekerPage(){
 		Assert.assertEquals(driver.getTitle(), "Job Search, Employment and Careers | EliteCareer");
 	}
+	
+	
 
 }

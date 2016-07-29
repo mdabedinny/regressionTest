@@ -15,7 +15,7 @@ public class TestJobSearchPage extends TestBase {
 	@Test(priority = 1)
 	public void testNewJobCount(){
 		
-		Assert.assertEquals(jobSearchPage.jobCount.getText(), "New Jobs (Total: 65 Jobs)");
+		Assert.assertEquals(jobSearchPage.jobCount.getText(), "New Jobs (Total: 135 Jobs)");
 	}
 	
 	@Test(priority = 0)

@@ -38,6 +38,7 @@ public class TestBase extends Driver {
 	
 	public void setUp(){
 		try{
+			chromeDriverPath = "./ExternalDriver/chromedriver";
 			setDriver(browserType, appUrl);
 			
 		}catch(Exception e){

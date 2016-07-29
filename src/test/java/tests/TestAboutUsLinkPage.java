@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,5 +17,7 @@ public class TestAboutUsLinkPage extends TestBase {
 	public void testAboutUsLinkPage(){
 		Assert.assertEquals(driver.getCurrentUrl(), "http://qa.elitecareer.net/aboutus.php");
 	}
+	
+	
 
 }

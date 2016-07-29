@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -45,6 +47,9 @@ public class RegistrationPage extends PageBase {
 	
 	@FindBy(name ="submit")
 	public WebElement submitButton;
+	
+	@FindBy(id = "error")
+	public List<WebElement> errorWebElementList;
 
 
 }
